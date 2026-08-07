@@ -19,8 +19,16 @@ function add(){
         list_items.appendChild(li);
         input_items.value= "";
 
-    }
-}
+        let rmv_btn = document.createElement('button');
+        rmv_btn.textContent="Remove" ;
+        li.appendChild(rmv_btn);
+        rmv_btn.classList.add('remove_btn');
+        rmv_btn.addEventListener('click',function remove (){
+            li.remove();
+        })
 
+    }
+
+}       
 
 addbtn.addEventListener('click',add);
