@@ -47,7 +47,12 @@ h1{
     padding: 30px;
     border-radius: 10px;
     border: 1px solid #ddd;
+    max-height: 600px;
+    overflow-y: auto;
 }
+
+ 
+
 
 
 .text{
@@ -56,6 +61,8 @@ h1{
    display: flex;
    gap: 10px;
    margin-bottom: 20px;
+   
+  
 
 }
 
@@ -115,7 +122,8 @@ h1{
 
 
 .task-menu ul{
-
+    
+    /* position: static; */
      list-style: none;
      display: flex;
      flex-direction: column;
@@ -127,7 +135,7 @@ h1{
 
 .task-menu ul li{
 
-
+    /* position: sticky; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -135,6 +143,7 @@ h1{
     padding: 12px 15px;
     border-radius: 5px;
     border: 1px solid #bdc3c7;
+    gap: 10px;
     transition: all 0.3s ease;
 
 }
@@ -152,7 +161,8 @@ h1{
 
 
 .remove_btn{
-
+    
+   
     background-color: #e74c3c;
     color: white;
     border: none;
@@ -160,9 +170,14 @@ h1{
     border-radius: 5px;
     cursor: pointer;
     font-size: 0.9 rem;
+    white-space: nowrap;
+    margin-left: auto;
      transition: all 0.3s ease;
 
 }
+
+
+
 
 .remove_btn:hover{
  
@@ -170,6 +185,33 @@ h1{
     background-color: #c0392b;
 
 }
+
+
+
+.edit_btn{
+
+     background-color:  #3498db;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9 rem;
+    
+     white-space: nowrap;
+     transition: all 0.3s ease;
+}
+
+
+
+.edit_btn:hover{
+
+    transform : scale(0.9);
+    background-color: blue;
+
+
+}
+
 
 
 @media( max-width: 600px){

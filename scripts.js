@@ -15,9 +15,15 @@ function add(){
     else{
         
         let li = document.createElement('li');
-        li.textContent= lnput_data;
+        let element= document.createElement('span');
+        li.appendChild(element);
+        element.innerText=lnput_data;
         list_items.appendChild(li);
         input_items.value= "";
+
+
+
+
 
         let rmv_btn = document.createElement('button');
         rmv_btn.textContent="Remove" ;
@@ -26,6 +32,30 @@ function add(){
         rmv_btn.addEventListener('click',function remove (){
             li.remove();
         })
+
+
+        
+        let edit_btn = document.createElement('button');
+        edit_btn.textContent="Edit";
+        li.appendChild(edit_btn);
+        edit_btn.classList.add('edit_btn');
+        edit_btn.addEventListener('click',function edit(){
+            let newValue = prompt('Edit your task:', lnput_data );
+            // console.log(newValue);
+            if(newValue !== null  && newValue !== ''){
+
+                lnput_data = newValue;
+                  element.innerText=lnput_data;
+        
+            }
+
+            else{
+                alert('please add new task')
+            }
+        })
+
+
+        
 
     }
 
