@@ -6,7 +6,6 @@ A simple to-do list web app built to practice core JavaScript, DOM manipulation,
 - Add new tasks
 - Edit existing tasks
 - Delete tasks
-- Live clock display
 
 ## Tech Stack
 - HTML5
